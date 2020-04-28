@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1 class="center" id='h1_home'> <i class="fas fa-warehouse"></i> </h1>
+        <div class="box_car">
+            <h1 class="center"> my garage</h1>
+            <img src="assets/supercar.svg" alt="">
+
+        </div>
+
+        <div class="box-container">
+            <div class="box-input">
+                <label for="">brand <i class="far fa-copyright p1"></i></label>
+                <input type="text" id="brand" placeholder="insert brand">
+            </div>
+            <div class="box-input m1-bot">
+                <label for="">model  <i class="fas fa-car p1"></i></label>
+                <input type="text" id="model" placeholder="insert model">
+            </div>
+            <div class="box-input color_border">
+                <label id='color_btn' for="">color <i id="btn_color_show" class="fas fa-fill-drip p1"></i></label>
+
+
+            </div>
+            <div id='modal' class="modal">
+                <span class="close">&times;</span>
+                <div class="modal-content">
+
+                    <p>choose your favourite color</p>
+                    <div class="colors_palette">
+                        <label class="orange">
+                            <input class="radio_color" type="radio" name="color" value="orange">
+                            <div class="button"><span></span></div>
+                        </label>
+                        <label class="red">
+                            <input class="radio_color" type="radio" name="color" value="red">
+                            <div class="button"><span></span></div>
+                        </label>
+                        <label class="black">
+                            <input class="radio_color" type="radio" name="color" value="black">
+                            <div class="button"><span></span></div>
+                        </label>
+                        <label class="blue">
+                            <input class="radio_color" type="radio" name="color" value="blue">
+                            <div class="button"><span></span></div>
+                        </label>
+                        <label class="pink">
+                            <input class="radio_color" type="radio" name="color" value="pink">
+                            <div class="button"><span></span></div>
+                        </label>
+                        <label class="yellow">
+                            <input class="radio_color" type="radio" name="color" value="yellow">
+                            <div class="button"><span></span></div>
+                        </label>
+                        <label class="purple">
+                            <input class="radio_color" type="radio" name="color" value="purple">
+                            <div class="button"><span></span></div>
+                        </label>
+                        <label class="cyan">
+                            <input class="radio_color" type="radio" name="color" value="cyan">
+                            <div class="button"><span></span></div>
+                        </label>
+                        <label class="white">
+                            <input class="radio_color" type="radio" name="color" value="white">
+                            <div class="button"><span></span></div>
+                        </label>
+                        <label class="magenta">
+                            <input class="radio_color" type="radio" name="color" value="magenta">
+                            <div class="button"><span></span></div>
+                        </label>
+
+                    </div>
+                </div>
+            </div>
+            <div class="addCarBox m1-bot">
+                <button class="btn">
+                    ADD CAR 
+                </button>
+                <!-- <i class="fas fa-plus"></i> -->
+            </div>
+
+        </div>
+        <hr>
+        <div class="box-search m1-bot">
+            <label for=" ">filter <i class="fas fa-filter p1"></i></label>
+            <input type="text" id="searchInput" placeholder="by id, brand, model, color ">
+        </div>
+        <hr>
+
+        <div class="box-output">
+            <div class="box-output-header">
+                <div><span>ID</span></div>
+                <div><span>brand</span></div>
+                <div><span>model</span></div>
+                <div><span>color</span></div>
+                <div><span><i class="fas fa-trash-alt"></i></span></div>
+
+            </div>
+            <ul class="box-output-text">
+
+            </ul>
+        </div>
+    </div>
+    <script src="main.js "></script>
+</body>
+
+</html>

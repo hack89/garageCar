@@ -1,0 +1,348 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(./assets/NFS_by_JLTV.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: myFirstFont;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background: rgb(0, 255, 231);
+    background: -moz-linear-gradient(267deg, rgba(0, 255, 231, 1) 10%, rgba(90, 112, 255, 1) 78%);
+    background: -webkit-linear-gradient(267deg, rgba(0, 255, 231, 1) 10%, rgba(90, 112, 255, 1) 78%);
+    background: linear-gradient(267deg, rgba(0, 255, 231, 1) 10%, rgba(90, 112, 255, 1) 78%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#00ffe7", endColorstr="#5a70ff", GradientType=1);
+    min-height: 100vh;
+}
+
+.container {
+    /* overflow: hidden; */
+    background-color: white;
+    box-shadow: -3px 4px 8px 1px #14024d;
+    height: 100%;
+    margin: 20px;
+    padding: 40px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    width: 500px;
+}
+
+
+/* modal --------------------------------------------------- */
+
+.colors_palette {
+    padding: 5px 0;
+}
+
+.modal {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+    background-color: white;
+    box-shadow: -2px 2px 4px 1px #14024d;
+    padding: 40px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    width: 250px;
+    transition: all .4s;
+}
+
+.show_modal {
+    z-index: 77;
+    opacity: 1 !important;
+    display: block !important;
+}
+
+
+/* ================ PALETTE COLORS RADIO BUTTON ================ */
+
+input.radio_color {
+    display: none;
+}
+
+.button {
+    display: inline-block;
+    position: relative;
+    width: 10px;
+    height: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.button span {
+    display: block;
+    position: absolute;
+    width: 10px;
+    padding: 10px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+    background: #eeeeee;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    transition: ease .3s;
+}
+
+.button:hover span {
+    box-shadow: 0 2px 5px 4px rgba(0, 0, 0, 0.26);
+}
+
+.red .button span {
+    background: red;
+}
+
+.orange .button span {
+    background: #FF5722;
+}
+
+.black .button span {
+    background: rgb(0, 0, 0);
+}
+
+.blue .button span {
+    background: blue;
+}
+
+.pink .button span {
+    background: pink;
+}
+
+.yellow .button span {
+    background: yellow;
+}
+
+.purple .button span {
+    background: purple;
+}
+
+.cyan .button span {
+    background: cyan;
+}
+
+.white .button span {
+    background: white;
+}
+
+.magenta .button span {
+    background: magenta;
+}
+
+.modal-content {
+    margin: auto;
+    width: 100%;
+    position: relative;
+}
+
+.modal-content p {
+    text-align: center;
+}
+
+.close {
+    cursor: pointer;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+
+/* modal --------------------------------------------------- */
+
+.center {
+    text-align: center;
+}
+
+.p1 {
+    padding: 6px;
+}
+
+.m1-bot {
+    margin-bottom: 10px;
+}
+
+.box-container,
+.box-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 7px;
+}
+
+#color_btn {
+    cursor: pointer;
+}
+
+.addCarBox {
+    margin: 6px 0;
+    width: 100%;
+}
+
+.box-search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+hr {
+    color: lightcyan;
+}
+
+.color_border {
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.color_border,
+input[type="text"] {
+    border-color: black;
+    box-shadow: none;
+    border-radius: 6px;
+    border: 2px solid black;
+    transition: all .2s ease-out;
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    padding: 6px 4px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+input:focus {
+    border: 2px solid #14024d;
+    box-shadow: -2px 2px 4px 1px #14024d;
+    outline: none;
+}
+
+input::placeholder {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+.btn {
+    background-color: transparent;
+    border: 1px solid black;
+    outline: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: black;
+    transition: all .4s ease-in-out;
+    width: 100%;
+}
+
+.box-input.color_border:hover,
+.btn:hover {
+    background-color: black;
+    color: white;
+}
+
+.box-output {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px auto 0;
+}
+
+.box-output-header {
+    width: 100%;
+    padding: 10px 0 22px 0;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    border-bottom: 1px solid darkgrey;
+}
+
+.box-output-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 70px;
+    padding: 5px 0;
+    font-size: 10px;
+    align-items: center;
+}
+
+.car-item {
+    width: 100%;
+    display: flex;
+    min-height: 50px;
+    text-align: center;
+    border-bottom: 1px solid darkgrey;
+    padding: 15px 0;
+    font-size: 15px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.car-item>span {
+    font-family: Verdana !important;
+}
+
+.box-output-header>*,
+.car-details {
+    width: 24%;
+}
+
+.filtered {
+    display: none !important;
+}
+
+.remove {
+    cursor: pointer;
+}
+
+.coloreScelto,
+.success,
+.danger {
+    color: white;
+    font-family: Verdana !important;
+    text-align: center;
+    padding: 5px;
+    text-transform: uppercase;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.success {
+    border: 2px solid;
+    background-color: #dff0d8;
+    color: #3c763d;
+    border-color: #d6e9c6;
+}
+
+.danger {
+    border: 2px solid;
+    background-color: #f2dede;
+    color: #a94442;
+    border-color: #ebccd1;
+}
+
+.box_car {
+    display: flex;
+    flex-direction: column;
+}
+
+.box_car img {
+    overflow: hidden;
+    animation: moveInRight 1s ease-out;
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+    80% {
+        transform: translateX(-1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
